@@ -23,3 +23,6 @@ But if you *really* can't wait...
 
 ##  Any questions? Suggestions?
 hit us up on the twitters at [@museEstate](https://twitter.com/MuseEstate)
+
+## License
+MUSE is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE.
