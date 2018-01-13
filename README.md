@@ -8,7 +8,12 @@ MUSE is built around being both minimal and functional.
 
 The entire platform consists of a server and a [client](https://github.com/MUSEestate/MUSEestate-iOS). 
 
-Currenty the server is written in Ruby and the client is a native iOS app written in [RubyMotion](http://www.rubymotion.com). By using the server and the API, a client may be created for any other platform or framework from a full fledged Android application to JavaScript widgets that serve up Real Estate data to agent websites, brokerages, blogs, and anything else you can fucking imagine.
+Currenty the server is written in Ruby and the client is a native iOS app written in [RubyMotion](http://www.rubymotion.com). By using the server and the API, a client may be created for any other platform or framework from a full fledged Android application to JavaScript widgets that serve up Real Estate data to agent websites, brokerages, blogs, and anything else you can imagine.
+
+## Using MLS® data with MUSE
+
+In order to fetch and store MLS® listings you will have to use the [bindings gem](https://github.com/AddieAddicted/MUSEestate-bindings).
+
 
 ## Requirements
 
@@ -22,8 +27,6 @@ For the iOS [MUSEestate.app](https://github.com/MUSEestate/MUSEestate-iOS) you'l
 - ruby gems
 - rubymotion
 - xcode (and by extention a computer running MacOS)
-
-
 
 ## Installing
 
