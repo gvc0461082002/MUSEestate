@@ -1,0 +1,7 @@
+<h1>Add A New Place</h1>
+<p>A quick rundown on this page and how this functions. Right now we are entering this shit in by hand because we're a fictional
+  brokerage that doesn't actually exist. If we were actually a brokerage or perhaps an agent from a brokerage, we could use a <%= link_to 'Ruby RETS', 'https://github.com/estately/rets' %> plugin and fish the listings from a rets server that most real estate boards provide, and populate this shit with a RETS feed. Just saying...</p>
+
+<%= render 'form', place: @place %>
+<br/>
+<%= link_to 'Back', places_path %>

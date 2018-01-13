@@ -1,0 +1,54 @@
+<%= form_with(model: hood, local: true) do |form| %>
+  <% if hood.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hood.errors.count, "error") %> prohibited this hood from being saved:</h2>
+
+      <ul>
+      <% hood.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :hood_name, class: "form-control", placeholder: "Enter Neighborhood Name", 'aria-describedby': "nameHelp" %>
+    <small id="nameHelp" class="form-text text-muted">Example: Yorkville</small>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :description, "Neighborhood description" %>
+    <%= form.text_area :description, id: :hood_description, rows: 3, class: "form-control", placeholder: "Describe The Neighborhood", 'aria-describedby': "descriptionHelp" %>
+    <small id="descriptionHelp" class="form-text text-muted">Example: My man slime got this whole shit on lock nigga, him and dutch nigga ask about the team</small>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :hood_latitude, class: "form-control", placeholder: "-79.384293", 'aria-describedby': "longitudeHelp" %>
+    <small id="latitudeHelp" class="form-text text-muted">Example: -79.384293</small>
+
+  </div>
+
+  <div class="form-group">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :hood_latitude, class: "form-control", placeholder: "43.653908", 'aria-describedby': "latitudeHelp" %>
+    <small id="latitudeHelp" class="form-text text-muted">Example: 43.653908</small>
+  </div>
+
+  <%#= form.hidden_field :image, value: hood.cached_image_data %>
+
+  <div class="form-group">
+    <%= form.label :image, "Add an image" %>
+    <%= form.file_field :image, id: :hood_image, class: "form-control", 'aria-describedby': "fileHelp" %>
+    <small id="addressHelp" class="form-text text-muted">Example: Literally any photo of this place at all, even a shitty one.</small>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit 'Submit', :class => "btn btn-primary" %>
+  </div>
+<% end %>

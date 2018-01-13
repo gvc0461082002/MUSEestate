@@ -1,0 +1,11 @@
+# real estate MUSE configuration variables
+# do your shit girlfriend
+
+site_name: Fake Brokerage # this shit *COULD* be different from the brokerage name...
+brokerage_name: Fake Brokerage, INC
+brokerage_tagline: Lorem ipsum dolor sit amet, vero omnis vocibus.
+brokerage_email: broker@fakebrokerage.fake
+brokerage_phone: 555-555-5555
+brokerage_fax: 555-555-5555
+brokerage_address1: 123 Fake Street
+brokerage_address2: Toronto, Ontario M4M M4MM

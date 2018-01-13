@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<% title @hood.name %>
+
+<% if current_user && current_user.admin_role? %>
+  <div class="container placeContainer mb-4">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h6>Yer an admin and you can do shit like this:</h6>
+        <%= link_to 'Edit ' + @hood.name.to_s, edit_hood_path(@hood) %>
+          <hr/>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <%= image_tag(@hood.image.url, style: 'width: 100%;', class: 'mb-4') %>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <h1><%= @hood.name %></h1>
+      <p><%= @hood.description %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<% if current_user && current_user.admin_role == true %>
+  <%= link_to 'Show', place %> | <%= link_to 'Edit', edit_place_path(place) %> | <%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <br/>
+<% end %>
+<%= link_to(image_tag(place.image.url), place) %>
+<%= number_to_currency(place.price, precision: 0)%>
+<br/>
+<%= place.address %>, <%= place.area %>
+<br/>
+<i class="fa fa-bed fa-1x"></i><%= place.bedrooms %> <i class="fa fa-bath" aria-hidden="true"></i><%= place.bathrooms %><br/></b><br/>

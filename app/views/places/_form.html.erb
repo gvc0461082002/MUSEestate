@@ -1,0 +1,141 @@
+<%= form_with(model: place, local: true) do |form| %>
+  <% if place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% place.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <%= form.label :saleOrLease, "For Sale or For Lease?" %>
+    <%= form.select :saleOrLease, options_for_select([['Sale', 's'], ['Lease', 'l']]), id: :place_saleOrLease,  class: "form-control", placeholder: "Sale", 'aria-describedby': "forSaleOrLeaseHelp" %>
+    <small id="forSaleOrLeaseHelp" class="form-text text-muted">Example: Sale</small>
+
+  </div>
+
+
+    <div class="form-group">
+      <%= form.label :listingType, "Listing Type" %>
+      <%= form.select :listingType, options_for_select([['Residential', 'residential'], ['Condominium', 'condo'], ['Commercial', 'commercial']]), id: :place_listingType,  class: "form-control", placeholder: "Sale", 'aria-describedby': "listingTypeHelp" %>
+      <small id="listingTypeHelp" class="form-text text-muted">Example: Residential</small>
+
+    </div>
+
+    <div class="form-group">
+      <%= form.label :brokerage %>
+      <%= form.text_field :address, id: :place_brokerage, class: "form-control", placeholder: "Enter Brokerage Name", 'aria-describedby': "brokerageHelp" %>
+      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+      <small id="brokerageHelp" class="form-text text-muted">Example: Fake Brokerage, INC</small>
+    </div>
+
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :place_address, class: "form-control", placeholder: "Enter the address of this place", 'aria-describedby': "addressHelp" %>
+    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+    <small id="addressHelp" class="form-text text-muted">Example: 123 Main Street</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :area %>
+    <%= form.text_field :area, id: :place_area, class: "form-control", placeholder: "Enter Area Name", 'aria-describedby': "areaHelp" %>
+    <small id="areaHelp" class="form-text text-muted">Example: Yorkville</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :place_city, class: "form-control", placeholder: "Enter City Name", 'aria-describedby': "cityHelp" %>
+    <small id="cityHelp" class="form-text text-muted">Example: Toronto</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :place_state, class: "form-control", placeholder: "Enter Province/State Name", 'aria-describedby': "stateHelp" %>
+    <small id="stateHelp" class="form-text text-muted">Example: Ontario</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :place_country, class: "form-control", placeholder: "Enter Country Name", 'aria-describedby': "countryHelp" %>
+    <small id="countryHelp" class="form-text text-muted">Example: Canada</small>
+  </div>
+
+
+    <div class="form-group">
+      <%= form.label :zip, "Zip Code / Postal Code" %>
+      <%= form.text_field :zip, id: :place_zip, class: "form-control", placeholder: "Zip Code / Postal Code", 'aria-describedby': "zipHelp" %>
+      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+      <small id="cityHelp" class="form-text text-muted">Example: M5H 2N2</small>
+    </div>
+
+
+  <div class="form-group">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :place_price, type: "number", class: "form-control", placeholder: "$100,000,000", 'aria-describedby': "priceHelp" %>
+    <small id="priceHelp" class="form-text text-muted">Example: $100,000,000 (without commas)</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bedrooms %>
+    <%= form.text_field :bedrooms, id: :place_bedrooms, type: "number", class: "form-control", placeholder: "5", 'aria-describedby': "bedroomsHelp" %>
+    <small id="bedroomsHelp" class="form-text text-muted">Example: 5</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bathrooms %>
+    <%= form.text_field :bathrooms, id: :place_bathrooms, type: "number", class: "form-control", placeholder: "7", 'aria-describedby': "bedroomsHelp" %>
+    <small id="bedroomsHelp" class="form-text text-muted">Example: 7</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :sqftSize %>
+    <%= form.text_field :sqftSize, id: :place_sqftSize, class: "form-control", placeholder: "2000-5000", 'aria-describedby': "sqftSizeHelp" %>
+    <small id="sqftSizesHelp" class="form-text text-muted">Example: 1000-5000 for between 1000 and 5000 sqft</small>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :listingText, "Listing Text" %>
+    <%= form.text_area :listingText, id: :place_listingText, rows: 3, class: "form-control", placeholder: "Enter The Listing Text For This Place", 'aria-describedby': "listingTextHelp" %>
+    <small id="listingTextHelp" class="form-text text-muted">Example: This 17 bedroom mansion is the definition of fucking opulance and you'll live like a pasha you buy this shit.</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :listingExtras, "Listing Extras" %>
+    <%= form.text_area :listingExtras, id: :place_listingExtras, rows: 3, class: "form-control", placeholder: "Enter The Extras Text For This Place", 'aria-describedby': "extrasHelp" %>
+    <small id="extrasHelp" class="form-text text-muted">Example: Includes a private underground 10 car garage where the owner has left you a Maserati as a token of gratitude and appreciation for purchsing this magnificant estate.</small>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :place_latitude, class: "form-control", placeholder: "-79.384293", 'aria-describedby': "longitudeHelp" %>
+    <small id="latitudeHelp" class="form-text text-muted">Example: -79.384293</small>
+
+  </div>
+
+  <div class="form-group">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :place_latitude, class: "form-control", placeholder: "43.653908", 'aria-describedby': "latitudeHelp" %>
+    <small id="latitudeHelp" class="form-text text-muted">Example: 43.653908</small>
+  </div>
+
+  <!-- ActionView::Helpers::FormHelper -->
+  <%= form.hidden_field :image, value: place.cached_image_data %>
+
+  <div class="form-group">
+    <%= form.label :image, "Add an image" %>
+    <%= form.file_field :image, id: :place_image, class: "form-control", 'aria-describedby': "fileHelp" %>
+    <small id="fileHelp" class="form-text text-muted">Example: Literally any photo of this place at all, even a shitty one.</small>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit 'Submit', :class => "btn btn-primary" %>
+  </div>
+<% end %>

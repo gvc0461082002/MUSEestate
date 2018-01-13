@@ -1,0 +1,25 @@
+
+<div class="text-center">
+
+<%= image_tag('logo.png', style: "width: 100%; padding: 20px;") %>
+<h3>"We kick serious ass and get results and its a lot more than a set of fucking steak knives."</h3>
+<p class="lead">Ut vehicula libero eu felis blandit, et fermentum turpis facilisis. Vivamus arcu est, hendrerit ac dapibus nec, cursus dignissim libero. Mauris et massa vel urna pretium ullamcorper. Etiam rhoncus massa vel quam pretium, quis venenatis nisl vulputate. Phasellus sapien ligula, imperdiet nec nisi nec, rutrum ornare nunc. Suspendisse in elementum mi. Nunc et ipsum finibus, ullamcorper quam vitae, ultrices purus. Donec malesuada condimentum metus nec accumsan. Nullam sed ultricies tortor. Duis dignissim ornare ante varius interdum. Integer pharetra ultricies lectus ut sagittis. Sed ac erat a risus iaculis varius. Pellentesque vel tortor fermentum, egestas turpis gravida, vehicula felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et fringilla enim. Etiam erat est, imperdiet eu est consequat, dictum porta risus.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeWidget">
+      <h2>Listings for Toronto, Ontario</h2>
+    </div>
+  </div>
+  <div class="row">
+    <% Place.all.each do |place| %>
+    <!-- insert listing stuff here -->
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 placeWidget">
+      <%= render "/shared/placeWidget", place: place %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div>
