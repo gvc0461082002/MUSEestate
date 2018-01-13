@@ -21,5 +21,5 @@ But if you *really* can't wait...
 5. create the database `rake db:create`
 6. run the database migrations `rake db:migrate`
 
-##  Any questions?
+##  Any questions? Suggestions?
 hit us up on the twitters at [@museEstate](https://twitter.com/MuseEstate)
