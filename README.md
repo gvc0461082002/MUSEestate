@@ -10,6 +10,21 @@ The entire platform consists of a server and a [client](https://github.com/MUSEe
 
 Currenty the server is written in Ruby and the client is a native iOS app written in [RubyMotion](http://www.rubymotion.com). By using the server and the API, a client may be created for any other platform or framework from a full fledged Android application to JavaScript widgets that serve up Real Estate data to agent websites, brokerages, blogs, and anything else you can fucking imagine.
 
+## Requirements
+
+- Ruby On Rails
+- PostgreSQL (for system data i.e users)
+- MongoDB (for remote real estate data i.e a [RETS](https://github.com/estately/rets) feed from a real estate board)
+
+For the iOS [MUSEestate.app](https://github.com/MUSEestate/MUSEestate-iOS) you'll need:
+
+- ruby
+- ruby gems
+- rubymotion
+- xcode (and by extention a computer running MacOS)
+
+
+
 ## Installing
 
 This version isn't complete and will require PostgreSQL among other things. Also theres a bunch of stuff still missing. Stay tuned :)
