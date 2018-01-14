@@ -2,7 +2,7 @@
 
 MUSE is an open source real estate platform, written mostly in Ruby.
 
-![muse screenshot](http://addie.addicted.pw/images/muse.jpg)
+![muse screenshot](http://addicted.pw/images/muse.jpg)
 
 MUSE is built around being both minimal and functional.
 
@@ -12,14 +12,13 @@ Currenty the server is written in Ruby and the client is a native iOS app writte
 
 ## Using MLS® data with MUSE
 
-In order to fetch and store MLS® listings you will have to use the [bindings gem](https://github.com/AddieAddicted/MUSEestate-bindings).
+In order to fetch and store MLS® listings you will have to use the [bindings gem](https://github.com/AddisonEmacs/MUSEestate-bindings).
 
 
 ## Requirements
 
 - Ruby On Rails
 - PostgreSQL (for system data i.e users)
-- MongoDB (for remote real estate data i.e a [RETS](https://github.com/estately/rets) feed from a real estate board)
 
 For the iOS [MUSEestate.app](https://github.com/MUSEestate/MUSEestate-iOS) you'll need:
 
