@@ -42,8 +42,11 @@ But if you *really* can't wait...
 5. create the database `rake db:create`
 6. run the database migrations `rake db:migrate`
 
-##  Any questions? Suggestions?
-hit us up on the twitters at [@museEstate](https://twitter.com/MuseEstate)
+##  Any questions? Comments? Suggestions?
+
+You can contact us via twitter at [@museEstate](https://twitter.com/MuseEstate).
+
+Our offical website is at [http://muse.estate](http://muse.estate)
 
 ## License
 MUSE is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE.
