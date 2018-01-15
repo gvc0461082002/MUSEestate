@@ -42,7 +42,7 @@ But if you *really* can't wait...
 
 ## Blockchain support
 
-I've been told to add blockchain support, which in the form of a plugin called [MUSEestate-blockchain](https://github.com/AddisonEmacs/MUSEestate-blockchain). 
+I've been told to add blockchain support, which is in the form of a plugin called [MUSEestate-blockchain](https://github.com/AddisonEmacs/MUSEestate-blockchain). 
 
 ##  Any questions? Comments? Suggestions?
 
