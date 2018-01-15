@@ -14,7 +14,6 @@ Currenty MUSE is written in Ruby while the iOS app is written in [RubyMotion](ht
 
 In order to fetch and store MLS® listings you will have to use the [bindings gem](https://github.com/AddisonEmacs/MUSEestate-bindings).
 
-
 ## Requirements
 
 - Ruby On Rails
@@ -40,6 +39,10 @@ But if you *really* can't wait...
 4. edit config/database.yml if you wanna change from the default database settings...
 5. create the database `rake db:create`
 6. run the database migrations `rake db:migrate`
+
+## Blockchain support
+
+I've been told to add blockchain support, which in the form of a plugin called [MUSEestate-blockchain](https://github.com/AddisonEmacs/MUSEestate-blockchain). 
 
 ##  Any questions? Comments? Suggestions?
 
